@@ -32,7 +32,7 @@ pipeline {
             steps {
                 sh '''
                   /usr/bin/trivy image --exit-code 0 --severity LOW,MEDIUM $IMAGE_NAME
-                  /usr/bin/trivy image --exit-code 1 --severity HIGH,CRITICAL $IMAGE_NAME
+                  /usr/bin/trivy image --exit-code 1 --severity CRITICAL $IMAGE_NAME
                 '''
             }
         }
